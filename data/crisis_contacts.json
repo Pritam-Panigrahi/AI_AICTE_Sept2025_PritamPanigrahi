@@ -1,0 +1,152 @@
+{
+  "emergency": {
+    "title": "🚨 Emergency Services",
+    "contacts": [
+      {
+        "name": "Emergency Services",
+        "number": "911",
+        "description": "Immediate emergency response for life-threatening situations"
+      },
+      {
+        "name": "Crisis Text Line",
+        "number": "Text HOME to 741741",
+        "description": "24/7 crisis counseling via text message"
+      }
+    ]
+  },
+  "suicide_prevention": {
+    "title": "🆘 Suicide Prevention",
+    "contacts": [
+      {
+        "name": "988 Suicide & Crisis Lifeline",
+        "number": "988",
+        "description": "24/7 confidential support for people in distress and prevention/crisis resources"
+      },
+      {
+        "name": "Veterans Crisis Line",
+        "number": "1-800-273-8255, Press 1",
+        "description": "24/7 confidential help for veterans and their families"
+      },
+      {
+        "name": "International Association for Suicide Prevention",
+        "number": "Visit iasp.info/resources/Crisis_Centres/",
+        "description": "Global crisis center directory for international users"
+      }
+    ]
+  },
+  "mental_health": {
+    "title": "🧠 Mental Health Support",
+    "contacts": [
+      {
+        "name": "NAMI Helpline",
+        "number": "1-800-950-NAMI (6264)",
+        "description": "National Alliance on Mental Illness support and information"
+      },
+      {
+        "name": "SAMHSA National Helpline",
+        "number": "1-800-662-4357",
+        "description": "Mental health and substance abuse treatment referrals (24/7)"
+      },
+      {
+        "name": "National Suicide Prevention Lifeline",
+        "number": "988",
+        "description": "Free and confidential emotional support 24/7"
+      },
+      {
+        "name": "Psychology Today Therapist Directory",
+        "number": "psychologytoday.com",
+        "description": "Find mental health professionals in your area"
+      }
+    ]
+  },
+  "student_resources": {
+    "title": "🎓 Student Support",
+    "contacts": [
+      {
+        "name": "Campus Counseling Center",
+        "number": "Contact your institution directly",
+        "description": "On-campus mental health services and counseling"
+      },
+      {
+        "name": "Student Health Services",
+        "number": "Available at most colleges/universities",
+        "description": "Medical and psychological support for students"
+      },
+      {
+        "name": "National Student Support Helpline",
+        "number": "1-800-985-5990",
+        "description": "Mental health support specifically for students"
+      },
+      {
+        "name": "Crisis Chat for Students",
+        "number": "suicidepreventionlifeline.org/chat/",
+        "description": "Online chat support for students in crisis"
+      }
+    ]
+  },
+  "online_resources": {
+    "title": "💻 Online Support",
+    "contacts": [
+      {
+        "name": "BetterHelp",
+        "number": "betterhelp.com",
+        "description": "Professional online counseling and therapy services"
+      },
+      {
+        "name": "7 Cups",
+        "number": "7cups.com",
+        "description": "Free emotional support and online therapy"
+      },
+      {
+        "name": "Talkspace",
+        "number": "talkspace.com",
+        "description": "Online therapy with licensed therapists"
+      },
+      {
+        "name": "PTSD Coach",
+        "number": "ptsd.va.gov/appvid/mobile/ptsdcoach_app.asp",
+        "description": "Mobile app for PTSD symptom management"
+      },
+      {
+        "name": "Mindfulness Apps",
+        "number": "Headspace, Calm, Insight Timer",
+        "description": "Meditation and mindfulness apps for mental wellness"
+      },
+      {
+        "name": "MindShift",
+        "number": "anxietybc.com/app/mindshift",
+        "description": "App for managing anxiety and worry"
+      }
+    ]
+  },
+  "specialized_support": {
+    "title": "🎯 Specialized Support",
+    "contacts": [
+      {
+        "name": "LGBTQ+ National Hotline",
+        "number": "1-888-843-4564",
+        "description": "Support for LGBTQ+ individuals and their families"
+      },
+      {
+        "name": "National Sexual Assault Hotline",
+        "number": "1-800-656-4673",
+        "description": "24/7 confidential support for sexual assault survivors"
+      },
+      {
+        "name": "National Domestic Violence Hotline",
+        "number": "1-800-799-7233",
+        "description": "24/7 support for domestic violence situations"
+      },
+      {
+        "name": "National Eating Disorders Association",
+        "number": "1-800-931-2237",
+        "description": "Support and resources for eating disorder recovery"
+      },
+      {
+        "name": "Substance Abuse Helpline",
+        "number": "1-800-662-4357",
+        "description": "24/7 treatment referral and information service"
+      }
+    ]
+  }
+}
