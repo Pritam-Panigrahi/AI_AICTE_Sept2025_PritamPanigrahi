@@ -1,4 +1,4 @@
-# Visit Here :- [Visit MindMate Live](https://mind-botgit-8vxxr7kfhpvevz69kjwjfc.streamlit.app/)
+# Visit Here :- [[Visit MindMate Live](https://mind-botgit-8vxxr7kfhpvevz69kjwjfc.streamlit.app/](https://aiaictesept2025pritampanigrahi-i26bs4qheyhvaqsvet5hfu.streamlit.app/))
 
 ## Screenshots :-
 
