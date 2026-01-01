@@ -292,55 +292,54 @@ def display_chat_interface(mood_detector, chatbot, crisis_resources):
         
         col1, col2 = st.columns([4, 1])
         
+        with col1:
+            st.write("")
+        
         with col2:
             submit_button = st.form_submit_button("Send 💬", type="primary", use_container_width=True)
-        
-        with col1:
-            if st.form_submit_button("🎲 Get Random Quote", use_container_width=True):
-                random_quote = quotes_manager.get_random_quote()
-                st.info(f"💡 **Random Quote**: \"{random_quote['text']}\" — {random_quote['author']}")
     
     # Process user input
     if submit_button and user_input.strip():
         try:
-            # Sanitize input
-            clean_input = sanitize_input(user_input)
-            
-            # Detect mood and crisis indicators
-            mood_result = mood_detector.detect_emotion(clean_input)
-            is_crisis = mood_detector.detect_crisis_indicators(clean_input)
-            
-            # Update current mood
-            st.session_state.current_mood = {
-                "emotion": mood_result['emotion'],
-                "confidence": mood_result['confidence']
-            }
-            
-            # Add to mood history
-            add_mood_to_history(mood_result['emotion'], mood_result['confidence'])
-            
-            # Handle crisis detection
-            if is_crisis:
-                st.session_state.crisis_detected = True
-                crisis_resources.log_crisis_interaction(clean_input)
-                bot_response = chatbot.get_crisis_response()
-            else:
-                # Generate normal response
-                bot_response = chatbot.get_personality_response(mood_result['emotion'], clean_input)
-            
-            # Add to chat history
-            chat_entry = {
-                "timestamp": datetime.now(),
-                "user_message": clean_input,
-                "bot_response": bot_response,
-                "detected_emotion": mood_result['emotion']
-            }
-            
-            st.session_state.chat_history.append(chat_entry)
-            chatbot.add_to_history(clean_input, bot_response, mood_result['emotion'])
-            
-            # Rerun to show new messages
-            st.rerun()
+            with st.spinner("MindMate is thinking..."):
+                # Sanitize input
+                clean_input = sanitize_input(user_input)
+                
+                # Detect mood and crisis indicators
+                mood_result = mood_detector.detect_emotion(clean_input)
+                is_crisis = mood_detector.detect_crisis_indicators(clean_input)
+                
+                # Update current mood
+                st.session_state.current_mood = {
+                    "emotion": mood_result['emotion'],
+                    "confidence": mood_result['confidence']
+                }
+                
+                # Add to mood history
+                add_mood_to_history(mood_result['emotion'], mood_result['confidence'])
+                
+                # Handle crisis detection
+                if is_crisis:
+                    st.session_state.crisis_detected = True
+                    crisis_resources.log_crisis_interaction(clean_input)
+                    bot_response = chatbot.get_crisis_response()
+                else:
+                    # Generate normal response
+                    bot_response = chatbot.get_personality_response(mood_result['emotion'], clean_input)
+                
+                # Add to chat history
+                chat_entry = {
+                    "timestamp": datetime.now(),
+                    "user_message": clean_input,
+                    "bot_response": bot_response,
+                    "detected_emotion": mood_result['emotion']
+                }
+                
+                st.session_state.chat_history.append(chat_entry)
+                chatbot.add_to_history(clean_input, bot_response, mood_result['emotion'])
+                
+                # Rerun to show new messages
+                st.rerun()
             
         except Exception as e:
             st.error(f"An error occurred while processing your message: {str(e)}")
